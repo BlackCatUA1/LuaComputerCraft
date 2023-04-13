@@ -1,28 +1,34 @@
+local function acc()
 while true do
-term.clear()
-term.setCursorPos(1, 1)
-l = "Ваш_Логін"
-print("Enter your login: ")
-log = read()
-if log == l then
-  print("OK")
-  sleep(2)
-else
-  print("Error, please try again.")
-  sleep(2)
-end
-term.clear()
-term.setCursorPos(1, 1)
-p = "Ваш_Пароль"
-print("Enter your password: ")
-pass = read("*")
-if pass == p then
-  print("Access granted")
-  rs.setOutput("left", true)
-  sleep(3)
-  rs.setOutput("left", false)
-else
-  print("Access denied")
-  sleep(1)
+  term.clear()
+  term.setCursorPos(1, 1)
+  print("Enter your login: ")
+  account = "Ваш_Логін"
+  input_a = read()
+  if input_a == account then
+   break
+  end
 end
 end
+
+local function pass()
+while true do
+  term.clear()
+  term.setCursorPos(1, 1)
+  print("Enter your password: ")
+  password = "Ваш_Пароль"
+  input_p = read("*")
+  if input_p == password then
+   term.clear()
+   term.setCursorPos(1, 1)
+   term.setTextColour( colours.yellow)
+   print("CraftOS 1.5")
+   term.setTextColour( colours.white)
+   break
+  end
+end
+end
+
+-- То що нижче цього повідомлення, тоже пишемо, інакше працювати не буде.
+acc()
+pass()
