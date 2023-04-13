@@ -1,7 +1,7 @@
 while true do
 term.clear()
 term.setCursorPos(1, 1)
-l = "Ваш_Логин"
+l = "Ваш_Логін"
 print("Enter your login: ")
 log = read()
 if log == l then
